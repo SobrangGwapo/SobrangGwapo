@@ -1,31 +1,85 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img" aria-labelledby="title desc">
-  <title id="title">Decentralized systems, smart contracts and fullstack development</title>
-  <desc id="desc">A dark technical banner with a connected network motif.</desc>
+  <title id="title">Animated Web3 development network</title>
+  <desc id="desc">A dark technical banner with pulsing blockchain nodes and animated data moving across a decentralized network.</desc>
+
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#070b14"/>
-      <stop offset="0.5" stop-color="#111827"/>
+      <stop offset=".5" stop-color="#111827"/>
       <stop offset="1" stop-color="#071f2b"/>
     </linearGradient>
+
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#22d3ee"/>
-      <stop offset="0.5" stop-color="#818cf8"/>
-      <stop offset="1" stop-color="#34d399"/>
+      <stop offset="0" stop-color="#22d3ee">
+        <animate attributeName="stop-color" values="#22d3ee;#818cf8;#22d3ee" dur="7s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset=".5" stop-color="#818cf8">
+        <animate attributeName="stop-color" values="#818cf8;#34d399;#818cf8" dur="7s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="1" stop-color="#34d399">
+        <animate attributeName="stop-color" values="#34d399;#22d3ee;#34d399" dur="7s" repeatCount="indefinite"/>
+      </stop>
     </linearGradient>
-    <filter id="glow">
+
+    <radialGradient id="orb">
+      <stop offset="0" stop-color="#67e8f9" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#67e8f9" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
       <feGaussianBlur stdDeviation="4" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
       <path d="M40 0H0V40" fill="none" stroke="#94a3b8" stroke-opacity=".06" stroke-width="1"/>
     </pattern>
+
+    <style>
+      .flow {
+        fill: none;
+        stroke: url(#accent);
+        stroke-width: 2.5;
+        stroke-dasharray: 4 18;
+        stroke-linecap: round;
+        animation: data-flow 2.4s linear infinite;
+        filter: url(#glow);
+      }
+      .flow.reverse {
+        animation-direction: reverse;
+        animation-duration: 3.2s;
+      }
+      .soft-pulse {
+        animation: soft-pulse 4s ease-in-out infinite;
+      }
+      @keyframes data-flow {
+        to { stroke-dashoffset: -44; }
+      }
+      @keyframes soft-pulse {
+        0%, 100% { opacity: .12; }
+        50% { opacity: .3; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .flow, .soft-pulse { animation: none; }
+      }
+    </style>
   </defs>
 
   <rect width="1200" height="280" rx="22" fill="url(#bg)"/>
   <rect width="1200" height="280" rx="22" fill="url(#grid)"/>
-  <rect x="1" y="1" width="1198" height="278" rx="21" fill="none" stroke="url(#accent)" stroke-opacity=".55"/>
+  <rect x="1" y="1" width="1198" height="278" rx="21" fill="none" stroke="url(#accent)" stroke-opacity=".62">
+    <animate attributeName="stroke-opacity" values=".38;.8;.38" dur="5s" repeatCount="indefinite"/>
+  </rect>
 
-  <g fill="none" stroke="url(#accent)" stroke-width="2" stroke-opacity=".65">
+  <circle cx="600" cy="140" r="230" fill="url(#orb)" class="soft-pulse"/>
+
+  <g fill="none" stroke="url(#accent)" stroke-width="1.5" opacity=".13">
+    <path d="M600 35l91 52v106l-91 52-91-52V87z"/>
+    <path d="M600 58l71 41v82l-71 41-71-41V99z"/>
+    <animateTransform attributeName="transform" type="rotate" from="0 600 140" to="360 600 140" dur="36s" repeatCount="indefinite"/>
+  </g>
+
+  <g fill="none" stroke="url(#accent)" stroke-width="2" stroke-opacity=".5">
     <path d="M70 72L170 42l94 61 105-48"/>
     <path d="M70 72l42 112 107 38 45-119"/>
     <path d="M219 222l92-57 58-110"/>
@@ -34,20 +88,52 @@
     <path d="M830 54l-33 117 159 50"/>
   </g>
 
+  <g opacity=".9">
+    <path class="flow" d="M70 72L170 42l94 61 105-48"/>
+    <path class="flow reverse" d="M70 72l42 112 107 38 45-119"/>
+    <path class="flow" d="M830 54l88 56 102-47 111 71"/>
+    <path class="flow reverse" d="M830 54l-33 117 159 50"/>
+  </g>
+
+  <g fill="#a5f3fc" filter="url(#glow)">
+    <circle r="3.5">
+      <animateMotion dur="4.2s" repeatCount="indefinite" path="M70 72L170 42l94 61 105-48"/>
+    </circle>
+    <circle r="3">
+      <animateMotion dur="5.3s" begin="-2.1s" repeatCount="indefinite" path="M70 72l42 112 107 38 45-119"/>
+    </circle>
+    <circle r="3.5">
+      <animateMotion dur="4.8s" begin="-1.4s" repeatCount="indefinite" path="M830 54l88 56 102-47 111 71"/>
+    </circle>
+    <circle r="3">
+      <animateMotion dur="5.6s" begin="-3s" repeatCount="indefinite" path="M830 54l-33 117 159 50"/>
+    </circle>
+  </g>
+
   <g fill="#0f172a" stroke="#67e8f9" stroke-width="2" filter="url(#glow)">
-    <circle cx="70" cy="72" r="7"/><circle cx="170" cy="42" r="7"/>
-    <circle cx="264" cy="103" r="7"/><circle cx="369" cy="55" r="7"/>
-    <circle cx="112" cy="184" r="7"/><circle cx="219" cy="222" r="7"/>
-    <circle cx="311" cy="165" r="7"/>
-    <circle cx="830" cy="54" r="7"/><circle cx="918" cy="110" r="7"/>
-    <circle cx="1020" cy="63" r="7"/><circle cx="1131" cy="134" r="7"/>
-    <circle cx="797" cy="171" r="7"/><circle cx="956" cy="221" r="7"/>
-    <circle cx="1054" cy="177" r="7"/>
+    <circle cx="70" cy="72" r="7"><animate attributeName="r" values="6;9;6" dur="2.8s" repeatCount="indefinite"/></circle>
+    <circle cx="170" cy="42" r="7"><animate attributeName="r" values="7;9;7" dur="3.4s" begin="-.8s" repeatCount="indefinite"/></circle>
+    <circle cx="264" cy="103" r="7"><animate attributeName="r" values="6;8.5;6" dur="3s" begin="-1.4s" repeatCount="indefinite"/></circle>
+    <circle cx="369" cy="55" r="7"><animate attributeName="r" values="7;9;7" dur="3.7s" begin="-.3s" repeatCount="indefinite"/></circle>
+    <circle cx="112" cy="184" r="7"><animate attributeName="r" values="6;8;6" dur="3.2s" begin="-1s" repeatCount="indefinite"/></circle>
+    <circle cx="219" cy="222" r="7"><animate attributeName="r" values="7;9;7" dur="3.6s" begin="-2s" repeatCount="indefinite"/></circle>
+    <circle cx="311" cy="165" r="7"><animate attributeName="r" values="6;8.5;6" dur="2.9s" begin="-.5s" repeatCount="indefinite"/></circle>
+
+    <circle cx="830" cy="54" r="7"><animate attributeName="r" values="6;9;6" dur="3.1s" begin="-1s" repeatCount="indefinite"/></circle>
+    <circle cx="918" cy="110" r="7"><animate attributeName="r" values="7;9;7" dur="3.5s" begin="-2s" repeatCount="indefinite"/></circle>
+    <circle cx="1020" cy="63" r="7"><animate attributeName="r" values="6;8.5;6" dur="2.8s" begin="-.4s" repeatCount="indefinite"/></circle>
+    <circle cx="1131" cy="134" r="7"><animate attributeName="r" values="7;9;7" dur="3.8s" begin="-1.2s" repeatCount="indefinite"/></circle>
+    <circle cx="797" cy="171" r="7"><animate attributeName="r" values="6;8;6" dur="3.3s" begin="-2.3s" repeatCount="indefinite"/></circle>
+    <circle cx="956" cy="221" r="7"><animate attributeName="r" values="7;9;7" dur="3.6s" begin="-.7s" repeatCount="indefinite"/></circle>
+    <circle cx="1054" cy="177" r="7"><animate attributeName="r" values="6;8.5;6" dur="3s" begin="-1.7s" repeatCount="indefinite"/></circle>
   </g>
 
   <g text-anchor="middle" font-family="Segoe UI, Inter, Arial, sans-serif">
     <text x="600" y="118" fill="#f8fafc" font-size="35" font-weight="700" letter-spacing="3">BUILDING TRUST IN CODE</text>
-    <rect x="421" y="139" width="358" height="3" rx="2" fill="url(#accent)"/>
+    <rect x="421" y="139" width="358" height="3" rx="2" fill="url(#accent)">
+      <animate attributeName="width" values="250;358;250" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="x" values="475;421;475" dur="5s" repeatCount="indefinite"/>
+    </rect>
     <text x="600" y="178" fill="#cbd5e1" font-size="16" font-weight="600" letter-spacing="2">BLOCKCHAIN · BACKEND · WEB</text>
   </g>
 </svg>
