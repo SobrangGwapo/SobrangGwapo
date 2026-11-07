@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/banner.svg" alt="Blockchain and fullstack development banner" width="100%" />
+  <img src="https://raw.githubusercontent.com/SobrangGwapo/SobrangGwapo/main/assets/banner.svg?v=3" alt="Blockchain and fullstack development banner" width="100%" />
 </p>
 
 <h1 align="center">Swedish Blockchain & Fullstack Developer</h1>
