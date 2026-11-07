@@ -8,6 +8,12 @@
   Building secure decentralized systems and production-ready applications across smart contracts, backend infrastructure and modern web interfaces.
 </p>
 
+<p align="center">
+  <a href="https://www.linkedin.com/in/freddy-kallefjord-048912381">
+    <img src="https://img.shields.io/badge/Connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect with Freddy Kallefjord on LinkedIn" />
+  </a>
+</p>
+
 <h3 align="center">Blockchain</h3>
 
 <p align="center">
