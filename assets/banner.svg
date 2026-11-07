@@ -134,6 +134,6 @@
       <animate attributeName="width" values="250;358;250" dur="5s" repeatCount="indefinite"/>
       <animate attributeName="x" values="475;421;475" dur="5s" repeatCount="indefinite"/>
     </rect>
-    <text x="600" y="178" fill="#cbd5e1" font-size="16" font-weight="600" letter-spacing="2">BLOCKCHAIN · BACKEND · WEB</text>
+    <text x="600" y="178" fill="#cbd5e1" font-size="16" font-weight="600" letter-spacing="2">BLOCKCHAIN · FULLSTACK · WEB3</text>
   </g>
 </svg>
