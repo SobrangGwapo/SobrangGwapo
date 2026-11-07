@@ -2,12 +2,6 @@
   <img src="https://raw.githubusercontent.com/SobrangGwapo/SobrangGwapo/main/assets/banner.svg?v=4" alt="Blockchain and fullstack development banner" width="100%" />
 </p>
 
-<h1 align="center">Swedish Blockchain & Fullstack Developer</h1>
-
-<p align="center">
-  Building secure decentralized systems and production-ready applications across smart contracts, backend infrastructure and modern web interfaces.
-</p>
-
 <p align="center">
   <a href="https://www.linkedin.com/in/freddy-kallefjord-048912381">
     <img src="https://img.shields.io/badge/Connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect with Freddy Kallefjord on LinkedIn" />
